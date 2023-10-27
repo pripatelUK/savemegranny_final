@@ -1,0 +1,3 @@
+[submodule "skandha"]
+	path = skandha
+	url = https://github.com/etherspot/skandha
