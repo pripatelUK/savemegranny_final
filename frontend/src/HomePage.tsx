@@ -8,7 +8,7 @@ const HomePage: React.FC = () => {
     // const [login, setLogin] = useState(localStorage.getItem('login') || '');
     // const [loginConfirmed, setLoginConfirmed] = useState(!!localStorage.getItem('login'));
     const navigate = useNavigate();
-    const onActivateCamera = () => {
+    const onSelect = () => {
         // console.log(!!localStorage.getItem('login'))
         if (localStorage.getItem('login')) {
             navigate('/account');
@@ -23,7 +23,7 @@ const HomePage: React.FC = () => {
             {/* <Link to="/account" className="btn btn-primary w-3/4 break-words">
                 Granny Save Me!!
             </Link> */}
-            <button className="btn btn-primary w-3/4 break-words" onClick={onActivateCamera}>
+            <button className="btn btn-primary w-3/4 break-words" onClick={onSelect}>
                 Granny Save Me!!
             </button>
         </div >
