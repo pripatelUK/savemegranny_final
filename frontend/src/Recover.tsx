@@ -22,7 +22,7 @@ const Recover: React.FC = () => {
     //     // For the sake of this example, we will simulate a response with a timeout
     //     setTimeout(() => {
     //         // Simulating an API response with proposed changes
-    //         setProposedChanges('Confirm Signer Hash With Owner: \n 0x213123123');
+    // setProposedChanges('Confirm Signer Hash With Owner: \n 0x213123123');
     //     }, 1000);
     // };
 
@@ -146,8 +146,15 @@ const Recover: React.FC = () => {
                         break;
                     }
                 }
+                const c = await keypassContract.guardianCount();
+                const x = await keypassContract.getProposal(1);
+                console.log("proposal", x)
+                setProposedChanges(`Total Guardians: ${c} - \n Total Signed: ${x.approvalCount_.toString()}`);
                 localStorage.setItem("recovery", JSON.stringify(recoveryObj));
-                navigate("/account");
+                setTimeout(() => {
+                    // Simulating an API response with proposed changes
+                    navigate("/account");
+                }, 5000);
             })
             .catch((e: any) => {
                 setTransactionStatus('error');
@@ -177,7 +184,7 @@ const Recover: React.FC = () => {
                         </>
                     ) : hasProposedChanges ? (
                         <>
-                            <h1 className="text-2xl font-semibold mb-4">Recover</h1>
+                            <h1 className="text-2xl font-semibold mb-4">Complete</h1>
                             <p className="mb-4">{proposedChanges}</p>
                         </>
                     ) : (

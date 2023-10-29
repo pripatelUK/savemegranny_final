@@ -31,7 +31,7 @@ const SetupGuardians: React.FC = () => {
     if (!login) throw Error('Login not set');
 
     const guardiansObj = guardians?.length ? JSON.parse(guardians) : {};
-    const count = guardiansObj[login].guardians.length || 0;
+    const count = guardiansObj[login]?.guardians.length || 0;
     const minimumEmailsMet = emails.length >= Math.max(3 - count, 1);
 
 

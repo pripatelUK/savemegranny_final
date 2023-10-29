@@ -117,7 +117,7 @@ const RecoverSetup: React.FC = () => {
                             <h1 className="text-2xl font-bold mb-6">Give This To Granny!</h1>
                             <h4 className="text-l font-bold mb-6 break-all">Account: {wallet}</h4>
                             {/* <h4 className="text-l font-bold mb-6">Tell her to open the 'Save Your Grandson' button</h4> */}
-                            <h4 className="text-l font-bold mb-2">Passphrase</h4>
+                            <h4 className="text-l font-bold mb-2">Recovery Data</h4>
                             <p className="text-lg break-all" style={{ wordBreak: 'break-all' }}>{passphrase}</p>
 
                         </>

@@ -20,6 +20,7 @@ const AccountPage: React.FC = () => {
     const navigate = useNavigate();
     const login = localStorage.getItem('login');
     const [guardians, setGuardians] = useState<Guardian[]>([]);
+    const [walletAddress, setWallet] = useState<string>("");
 
     useEffect(() => {
         const fetchData = async () => {
@@ -27,7 +28,7 @@ const AccountPage: React.FC = () => {
                 navigate('/');
                 return;
             }
-            const walletAddress = await getAddress(login);
+            setWallet(await getAddress(login));
             const guardians = localStorage.getItem("guardians");
             const guardiansObj = guardians?.length ? JSON.parse(guardians) : {};
 
@@ -84,7 +85,11 @@ const AccountPage: React.FC = () => {
                     </>
                 ) : (
                     <div className="w-full max-w-md mx-auto">
-                        <h1 className="text-2xl font-bold mb-6 text-center">Guardians</h1>
+                        <h1 className="text-xl font-bold text-center">Your Account</h1>
+                        <h1 className="text-2xl font-bold mb-10 text-center">{login}</h1>
+                        <h2 className="text-xl font-bold text-center">Passkey</h2>
+                        <h2 className="text-l font-bold mb-10 text-center">{walletAddress}</h2>
+                        <h1 className="text-xl font-bold mt-5 mb-2 text-center">Guardians</h1>
                         <div>
                             {guardians?.map((guardian, index) => (
                                 <div key={index} className="bg-white p-4 rounded-md shadow-md mb-4">
