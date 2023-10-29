@@ -36,6 +36,8 @@ AA allows for different signing schemas as opposed to the one enshrined into the
 
 Leveraging the AA stack and passkeys we have achieved a superior wallet &/or wallet recovery mechanism aimed at consumers to enable wider adoption of web3. 🤝
 
+[COSTON2 TESTNET DEPLOYMENT TX](https://coston2-explorer.flare.network/tx/0x79a9eb0e24f0e6bc9083070e9a58435053f2ae9c1ded7ba7eda9421d644c07bc)
+
 ### Etherspot
 *Best implementation of Etherspot's TransactionKit*:
 
