@@ -21,7 +21,7 @@ const CreateAccount: React.FC = () => {
     return (
 
         <div className="flex flex-col w-full h-full">
-            <Nav />
+            {/* <Nav /> */}
             <div className="flex flex-col w-10/12 lg:w-2/6 self-center items-center justify-center h-full mt-10">
                 <div className="form-control w-full max-w-xs items-center">
                     <label className="label self-start">

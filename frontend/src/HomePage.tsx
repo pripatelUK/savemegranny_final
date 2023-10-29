@@ -17,22 +17,12 @@ const HomePage: React.FC = () => {
         }
         // ... any other logic you want to run when the button is clicked
     };
-
-    const onRecover = () => {
-        // console.log(!!localStorage.getItem('login'))
-        // if (localStorage.getItem('login')) {
-        //     navigate('/account');
-        // } else {
-        navigate('/recover');
-        // }
-        // ... any other logic you want to run when the button is clicked
-    };
     const onRecoverSetup = () => {
         // console.log(!!localStorage.getItem('login'))
         // if (localStorage.getItem('login')) {
         //     navigate('/account');
         // } else {
-        navigate('/recover-setup');
+        navigate('/generate');
         // }
         // ... any other logic you want to run when the button is clicked
     };
@@ -47,9 +37,6 @@ const HomePage: React.FC = () => {
             </button>
             <button className="btn btn-primary w-3/4 break-words mb-4" onClick={onRecoverSetup}>
                 Save Me Granny
-            </button>
-            <button className="btn btn-success w-3/4 break-words" onClick={onRecover}>
-                Save Your Grandson
             </button>
         </div >
     );

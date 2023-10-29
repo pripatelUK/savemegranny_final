@@ -6,6 +6,7 @@ import CreateAccount from './CreateAccount'; // Import AccountPage component
 import AccountPage from './AccountPage'; // Import AccountPage component
 import SetupGuardians from './SetupGuardians'; // Import AccountPage component
 import Recover from './Recover'; // Import AccountPage component
+import GenerateRecover from './GenerateRecover'; // Import AccountPage component
 import './index.css';
 import HomePage from './HomePage';
 
@@ -15,7 +16,8 @@ const router = createBrowserRouter([
   { path: '/setup', element: <SetupGuardians /> },
   { path: '/account', element: <AccountPage /> },
   { path: '/create', element: <CreateAccount /> }, // Add new route for AccountPage
-  { path: '/recover', element: <Recover /> } // Add new route for AccountPage
+  { path: '/recover', element: <Recover /> }, // Add new route for AccountPage
+  { path: '/generate', element: <GenerateRecover /> } // Generates a new passkey
 ]);
 
 const rootElement = document.getElementById('root');
