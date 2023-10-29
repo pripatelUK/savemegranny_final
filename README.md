@@ -3,7 +3,7 @@
 
 ## Summary
 
-Account abstraction enabled passkey signing adds a biometric shield to wallet recovery, and a simplified wallet UX, **simple enough for non-crypto native guardians.**
+Account abstraction enabled passkey signing adds a biometric shield to wallet recovery, and a simplified wallet UX, **simple enough for non-crypto native guardians.** This is important as the most trusted people in your life are not always crypto-native. The reliance on biotmetric data also results in a vastly superior security flow for wallet recovery (and transacting in general).
 
 Lose access to your wallet? Set your Granny as a guardian, even she can save you now! 
 
