@@ -26,7 +26,14 @@ const SetupGuardians: React.FC = () => {
     const [emailInput, setEmailInput] = useState('');
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const isEmailValid = emailRegex.test(emailInput) && !emails.includes(emailInput);
-    const minimumEmailsMet = emails.length >= 3;
+    const guardians = localStorage.getItem("guardians");
+    const login = localStorage.getItem('login');
+    if (!login) throw Error('Login not set');
+
+    const guardiansObj = guardians?.length ? JSON.parse(guardians) : {};
+    const count = guardiansObj[login].guardians.length || 0;
+    const minimumEmailsMet = emails.length >= Math.max(3 - count, 1);
+
 
     const handleAddEmail = () => {
         if (isEmailValid) {
@@ -42,8 +49,6 @@ const SetupGuardians: React.FC = () => {
     const [transactionHash, setTransactionHash] = useState('');
     const [transactionStatus, setTransactionStatus] = useState<'waiting' | 'confirmed' | 'error'>();
     const handleSign = async () => {
-        const login = localStorage.getItem('login');
-        if (!login) throw Error('Login not set');
 
         setTransactionStatus('waiting');
         console.log('yo login', login);

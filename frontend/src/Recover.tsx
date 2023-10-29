@@ -136,12 +136,13 @@ const Recover: React.FC = () => {
                 const recovery = localStorage.getItem("recovery");
                 const recoveryObj = recovery?.length ? JSON.parse(recovery) : {};
                 const guardians = localStorage.getItem("guardians");
-                const signerEmails = Object.keys((guardians as any));
+                const guardiansObj = guardians?.length ? JSON.parse(guardians) : {};
+                const signerEmails = Object.keys((guardiansObj as any));
                 for (let index = 0; index < signerEmails.length; index++) {
                     const signerWallet = await getAddress(signerEmails[index]);
                     if (signerWallet == walletAddress) {
                         const email = signerEmails[index];
-                        recoveryObj[email] = (guardians as any)[email].guardians.filter(e => e !== email);
+                        recoveryObj[email] = guardiansObj[email].guardians.filter(e => e !== email);
                         break;
                     }
                 }

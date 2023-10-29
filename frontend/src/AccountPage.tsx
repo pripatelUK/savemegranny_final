@@ -70,12 +70,13 @@ const AccountPage: React.FC = () => {
             <div className="flex flex-col w-10/12 lg:w-2/6 self-center items-center justify-center h-full mt-2">
                 {guardians?.length === 0 ? (
                     <>
+                        <h1 className="text-2xl font-semibold mb-10">Your Account: {login}</h1>
                         <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-4" role="alert">
                             <p className="font-bold">Wallet Recovery Not Set Up</p>
                             <p>To secure your account, add trusted contacts who can help you recover your wallet if you lose access.</p>
                         </div>
                         <button
-                            className="btn btn-neutral w-1/2"
+                            className="btn btn-secondary w-1/2"
                             onClick={handleNavigateToRecoverSetup}
                         >
                             Setup Recovery
@@ -94,12 +95,12 @@ const AccountPage: React.FC = () => {
                                 </div>
                             ))}
                         </div>
+                        <button className="btn btn-secondary w-full break-words mt-5" onClick={addGuardians}>
+                            Add Guardians
+                        </button>
                     </div>
                 )}
-                <button className="btn btn-secondary w-2/4 break-words mt-5" onClick={addGuardians}>
-                    Add Guardians
-                </button>
-                <button className="btn btn-success w-2/4 break-words mt-5" onClick={onRecover}>
+                <button className="btn btn-success w-3/4 break-words mt-5" onClick={onRecover}>
                     Save Your Grandson
                 </button>
                 <button className="btn btn-primary w-1/4 break-words mt-10" onClick={() => {
