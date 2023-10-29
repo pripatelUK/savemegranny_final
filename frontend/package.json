@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
+    "@etherspot/transaction-kit": "^0.6.8",
     "@ethersproject/hardware-wallets": "^5.7.0",
     "@ledgerhq/hw-app-eth": "^6.34.1",
     "@ledgerhq/hw-transport-webusb": "^6.27.17",
+    "@mui/material": "^5.14.15",
     "@peculiar/asn1-ecc": "^2.3.6",
     "@peculiar/asn1-schema": "^2.3.6",
     "@react-spring/web": "^9.7.3",
