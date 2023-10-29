@@ -36,18 +36,24 @@ AA allows for different signing schemas as opposed to the one enshrined into the
 
 Leveraging the AA stack and passkeys we have achieved a superior wallet &/or wallet recovery mechanism aimed at consumers to enable wider adoption of web3. 🤝
 
-[COSTON2 TESTNET DEPLOYMENT TX](https://coston2-explorer.flare.network/tx/0x79a9eb0e24f0e6bc9083070e9a58435053f2ae9c1ded7ba7eda9421d644c07bc)
+Flare Deployment addresses:
+
+[Entrypoint](https://coston2-explorer.flare.network/address/0x36b58F5C1969B7b6591D752ea6F5486D069010AB)
+[Authentication](https://coston2-explorer.flare.network/address/0x8198f5d8F8CfFE8f9C413d98a0A55aEB8ab9FbB7)
+[AuthenticationAccountFactory](https://coston2-explorer.flare.network/address0x0355B7B8cb128fA5692729Ab3AAa199C1753f726)
+[Paymaster](https://coston2-explorer.flare.network/address/0x202CCe504e04bEd6fC0521238dDf04Bc9E8E15aB)
+[Paymaster owner](https://coston2-explorer.flare.network/address/0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266)
 
 ### Etherspot
 *Best implementation of Etherspot's TransactionKit*:
 
-***We use the react TxKit to send our transactions from our dApp.
+***We use the react TxKit/Prime SDK to send our transactions from our dApp.
 
 *Best use of Arka Paymaster*:
 
 Our team spent significant time trying to integrate the paymaster, debugging alongside the Etherspot team before release of TxKit 0.6.7. Shoutout to Bloody.eth & Taylor for the assistance. Unfortunately even with the update the initial bug still persists and we have commented out the code necessary to use the paymaster with txkit. We kindly ask to consider all our transactions as sponsored given the circumstances. 🙂
 
-Commented out:
+What we had to take out of our code:
 `<EtherspotBatches paymaste paymaster={{url: "https://arka.etherspot.io",api_key:"arka_public_key",context: { mode: "sponsor" }}}>`
 
 See `whitelistPaymasterAddr.ts` for proof of our paymaster whitelisting script.
