@@ -24,9 +24,7 @@ const CreateAccount: React.FC = () => {
             {/* <Nav /> */}
             <div className="flex flex-col w-10/12 lg:w-2/6 self-center items-center justify-center h-full mt-10">
                 <div className="form-control w-full max-w-xs items-center">
-                    <label className="label self-start">
-                        <span className="label-text text-lg">Enter Your Email</span>
-                    </label>
+                    <h1 className="text-2xl font-semibold mb-10">Enter Your Passkey Email</h1>
                     <input
                         type="text"
                         placeholder="john@doe.com"
@@ -41,7 +39,7 @@ const CreateAccount: React.FC = () => {
                         onClick={onCreate}
                         disabled={!isEmailValid || loading}
                     >
-                        {loading ? <span className="loading loading-dots"></span> : !isEmailValid ? `Wrong Email` : "Create Wallet!"}
+                        {loading ? <span className="loading loading-dots"></span> : !isEmailValid ? `Wrong Email` : "Sign In!"}
                     </button>
                 </div>
             </div>

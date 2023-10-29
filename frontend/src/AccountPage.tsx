@@ -57,6 +57,9 @@ const AccountPage: React.FC = () => {
     const onRecover = () => {
         navigate('/recover');
     };
+    const addGuardians = () => {
+        navigate('/setup');
+    };
 
     return (
         <div className="flex flex-col w-full h-full">
@@ -93,6 +96,9 @@ const AccountPage: React.FC = () => {
                         </div>
                     </div>
                 )}
+                <button className="btn btn-secondary w-2/4 break-words mt-5" onClick={addGuardians}>
+                    Add Guardians
+                </button>
                 <button className="btn btn-success w-2/4 break-words mt-5" onClick={onRecover}>
                     Save Your Grandson
                 </button>

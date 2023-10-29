@@ -155,9 +155,12 @@ const Recover: React.FC = () => {
     }
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
-            <div className="bg-white p-8 rounded-md shadow-lg max-w-md w-full">
-                <div className="flex flex-col items-center">
+        <div className="flex flex-col w-full h-full">
+            <div className="w-full flex justify-start items-center mt-4 px-4">
+                <button className="btn btn-outline" onClick={() => navigate(-1)}>Back</button>
+            </div>
+            <div className="flex flex-col w-10/12 lg:w-2/6 self-center items-center justify-center h-full mt-2">
+                <div className="flex flex-col items-center w-3/4">
                     {!isSubmitted ? (
                         <>
                             <h1 className="text-2xl font-semibold mb-4">Save Your Grandson</h1>

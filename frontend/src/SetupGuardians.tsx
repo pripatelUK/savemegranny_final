@@ -158,13 +158,16 @@ const SetupGuardians: React.FC = () => {
     // );
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
-            <div className="bg-white p-8 rounded-md shadow-lg max-w-md w-full">
-                <h1 className="text-2xl font-semibold mb-4">Setup Biometric Social Recovery</h1>
-                <button className="btn btn-outline mb-4" onClick={() => navigate(-1)}>Back</button>
+        <div className="flex flex-col w-full h-full">
+            {/* <button className="btn btn-outline mb-4" onClick={() => navigate(-1)}>Back</button> */}
+            <div className="w-full flex justify-start items-center mt-4 px-4">
+                <button className="btn btn-outline" onClick={() => navigate(-1)}>Back</button>
+            </div>
+            <div className="flex flex-col w-10/12 lg:w-2/6 self-center items-center justify-center h-full mt-2">
+                <h1 className="text-2xl font-semibold mb-10">Setup Biometric Social Recovery</h1>
 
                 {emails.length > 0 && (
-                    <div className="mb-12 mt-4">
+                    <div className="mb-12 mt-4 w-3/4">
                         {/* <h3 className="text-lg mb-2">Emails for Wallet Recovery:</h3> */}
                         {emails.map(email => (
                             <EmailCard key={email} email={email} onRemove={handleRemoveEmail} />
@@ -172,7 +175,7 @@ const SetupGuardians: React.FC = () => {
                     </div>
                 )}
 
-                <div className="mb-4 flex flex-col items-center">
+                <div className="mb-4 flex flex-col items-center w-3/4">
                     <input
                         type="email"
                         placeholder="Enter email address"
@@ -186,7 +189,7 @@ const SetupGuardians: React.FC = () => {
                 </div>
 
                 <button
-                    className="btn btn-success mt-4 w-full"
+                    className="btn btn-success mt-4 w-3/4"
                     onClick={handleSign}
                     disabled={!minimumEmailsMet}
                 >
